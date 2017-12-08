@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.scarey.parkingapp.controller.PeopleTabController">
+    <top>
+        <HBox>
+            <Button fx:id="btnRemove" onAction="#onRemove" text="Remove Selected">
+
+            </Button>
+         <Button mnemonicParsing="false" onAction="#buildData" text="Refresh" />
+            <padding>
+                <Insets bottom="10" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="tableView" prefHeight="345.0" prefWidth="359.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+                <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <VBox>
+            <TitledPane collapsible="false" text="Person">
+                <VBox>
+                    <TextField fx:id="fieldId" promptText="ID" />
+                    <TextField fx:id="fieldFirstName" promptText="First name" />
+                    <TextField fx:id="fieldLastName" promptText="Last name" />
+                    <Button onAction="#onAddPerson" prefHeight="25.0" prefWidth="175.0" text="Add Person" />
+                </VBox>
+            </TitledPane>
+            <padding>
+                <Insets left="10" />
+            </padding>
+        </VBox>
+    </right>
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane fx:id="tabPane" prefHeight="666.0" prefWidth="825.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.scarey.parkingapp.controller.MainController">
+    <tabs>
+        <Tab fx:id="passTabPage" text="Parking Passes">
+            <fx:include source="PassTab.fxml" />
+        </Tab>
+        <Tab fx:id="peopleTab" text="People">
+            <fx:include source="PeopleTab.fxml" />
+        </Tab>
+        <Tab fx:id="vehiclesTab" text="Vehicles">
+            <fx:include source="VehicleTab.fxml" />
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.scarey.parkingapp.controller.VehicleTabController">
+    <top>
+        <HBox>
+            <Button fx:id="btnRemove" onAction="#onRemove" text="Remove Selected">
+
+            </Button>
+            <Button mnemonicParsing="false" onAction="#buildData" text="Refresh" />
+            <padding>
+                <Insets bottom="10" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="tableView" prefHeight="345.0" prefWidth="359.0">
+            <columns>
+                <TableColumn fx:id="vin" prefWidth="150.0" text="VIN" />
+                <TableColumn fx:id="plate" prefWidth="75.0" text="Plate" />
+                <TableColumn fx:id="state" prefWidth="50.0" text="State" />
+                <TableColumn fx:id="year" prefWidth="50.0" text="Year" />
+                <TableColumn fx:id="make" prefWidth="75.0" text="Make" />
+                <TableColumn fx:id="model" prefWidth="75.0" text="Model" />
+                <TableColumn fx:id="color" prefWidth="75.0" text="Color" />
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <VBox>
+            <TitledPane collapsible="false" text="Vehicle">
+                <VBox>
+                    <TextField fx:id="fieldVin" promptText="VIN" />
+                    <TextField fx:id="fieldPlate" promptText="Plate" />
+                    <TextField fx:id="fieldState" promptText="State" />
+                    <TextField fx:id="fieldYear" promptText="Year" />
+                    <TextField fx:id="fieldMake" promptText="Make" />
+                    <TextField fx:id="fieldModel" promptText="Model" />
+                    <TextField fx:id="fieldColor" promptText="Color" />
+                    <Button mnemonicParsing="false" onAction="#onAddVehicle" prefWidth="175.0" text="Add Vehicle" />
+                </VBox>
+            </TitledPane>
+            <padding>
+                <Insets left="10" />
+            </padding>
+        </VBox>
+    </right>
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+</BorderPane>
